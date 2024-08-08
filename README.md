@@ -1,4 +1,4 @@
-<h1 align="center"># Прототип сайта по майнкрафту⛏🧱</h1>
+<h1 align="center">Прототип сайта по майнкрафту⛏🧱</h1>
 
 ![Minecraft Logo](https://example.com/minecraft_logo.png)
 
