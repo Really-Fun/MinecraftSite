@@ -1,6 +1,17 @@
 <h1 align="center">Прототип сайта по майнкрафту⛏🧱</h1>
 
-![Minecraft Logo](https://example.com/minecraft_logo.png)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11.8-blue" alt="Python Version"/>
+  <img src="https://img.shields.io/badge/aiogram-3.1.1-orange" alt="aiogram"/>
+  <img src="https://img.shields.io/badge/SdamGia-Api-yellow" alt="aiogram"/>
+  <img src="https://img.shields.io/badge/license-Apache-green" alt="License"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Really-Fun/EgeBot" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/GitHub-Repo-black" alt="GitHub Repo"/>
+  </a>
+</p>
 
 ## Описание
 
