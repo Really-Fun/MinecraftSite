@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Really-Fun/EgeBot" target="_blank" rel="noreferrer">
+  <a href="https://github.com/Really-Fun/MinecraftSite" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/GitHub-Repo-black" alt="GitHub Repo"/>
   </a>
     <img src="https://img.shields.io/badge/license-Apache-green" alt="License"/>
