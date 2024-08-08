@@ -1,0 +1,68 @@
+.profile-container {
+    width: 80%;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-header h2 {
+    margin: 0;
+    color: #f39c12;
+}
+
+.profile-status {
+    color: #2ecc71;
+}
+
+.profile-stats,
+.profile-achievements,
+.profile-activities {
+    background-color: #555;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile-stats h3,
+.profile-achievements h3,
+.profile-activities h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.profile-stats ul,
+.profile-achievements ul,
+.profile-activities ul {
+    list-style: none;
+    padding: 0;
+    color: #ecf0f1;
+}
+
+.profile-stats li,
+.profile-achievements li,
+.profile-activities li {
+    margin-bottom: 10px;
+}
+
+.profile-level,
+.profile-time,
+.profile-kills,
+.profile-deaths,
+.profile-builds {
+    font-weight: bold;
+    color: #ecf0f1;
+}

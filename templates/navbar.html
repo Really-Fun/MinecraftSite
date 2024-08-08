@@ -1,0 +1,19 @@
+{% load static %}
+<nav class="navbar">
+    <div class="logo">
+        <img src="{% static 'minecraft/images/logo.png' %}" alt="Логотип проекта">
+    </div>
+    <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Главная</a></li>
+        <li><a href="{% url 'about' %}">О нас</a></li>
+        <li><a href="{% url 'contacts' %}">Контакты</a></li>
+        <li><a href="{% url 'donate' %}">Донат</a></li>
+    </ul>
+    <div class="auth-buttons">
+        {% if user.is_authenticated %}
+        <a href={% url "profile" %} class="profile-btn">Профиль</a>
+        {% else %}
+        <a href={% url "login" %} class="login-btn">Войти</a>
+        {% endif %}
+    </div>
+</nav>

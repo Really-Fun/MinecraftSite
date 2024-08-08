@@ -1,0 +1,39 @@
+.falling-blocks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+.falling-blocks::before,
+.falling-blocks::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url("{% static 'minecraft/images/image.png' %}") no-repeat center center;
+    background-size: cover;
+    animation: fall 4s infinite linear;
+}
+
+.falling-blocks::after {
+    left: 60%;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}

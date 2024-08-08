@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #2e2e2e;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.logo img {
+    height: 40px;
+    width: 220px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px;
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.profile-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover,
+.profile-btn:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.news-container {
+    width: 66%;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 2%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.news-item {
+    background-color: #555;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.news-item h3 {
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.news-item p {
+    color: #ecf0f1;
+}
+
+.server-monitoring {
+    width: 30%;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content {
+    flex: 1;
+    /* Контент занимает оставшееся пространство */
+    padding: 20px;
+    /* Дополнительные отступы вокруг контента */
+}
+
+/* Стиль для больших контейнеров на других страницах */
+.content-container {
+    width: 80%;
+    /* Увеличиваем ширину контейнера */
+    background-color: #444;
+    padding: 40px;
+    /* Увеличиваем отступы */
+    border-radius: 8px;
+}
+
+.content-container h2 {
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.content-container p {
+    color: #ecf0f1;
+    line-height: 1.8;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}

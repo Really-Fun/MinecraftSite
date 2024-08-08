@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'minecraft/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'minecraft/css/fall_block.css' %}">
+</head>
+
+<body>
+    {% include "navbar.html" %}
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <!-- Контейнер новостей -->
+        <section class="news-container">
+            <h2>Новости</h2>
+            {% for new in news %}
+            <div class="news-item">
+                <h3>{{ new.title }}</h3>
+                <p>{{ new.text }}</p>
+            </div>
+            {% endfor %}
+        </section>
+        <div class="falling-blocks"></div>
+        <!-- Контейнер мониторинга серверов -->
+        <section class="server-monitoring">
+            <h2>Мониторинг серверов</h2>
+            <div class="server-item">
+                <p>Сервер 1: онлайн</p>
+            </div>
+            <div class="server-item">
+                <p>Сервер 2: оффлайн</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    {% include "footer.html" %}
+</body>
+
+</html>
