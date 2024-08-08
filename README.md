@@ -2,15 +2,17 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11.8-blue" alt="Python Version"/>
-  <img src="https://img.shields.io/badge/aiogram-3.1.1-orange" alt="aiogram"/>
-  <img src="https://img.shields.io/badge/SdamGia-Api-yellow" alt="aiogram"/>
-  <img src="https://img.shields.io/badge/license-Apache-green" alt="License"/>
+  <img src="https://img.shields.io/badge/Django-5.0.6-orange" alt="aiogram"/>
+  <img src="https://img.shields.io/badge/NoSQL-Redis-red" alt="aiogram"/>
+  <img src="https://img.shields.io/badge/SQL-Postgres-yellow" alt="aiogram"/>
+  <img src="https://img.shields.io/badge/mctools-1.3.0-green" alt="License"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/Really-Fun/EgeBot" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/GitHub-Repo-black" alt="GitHub Repo"/>
   </a>
+    <img src="https://img.shields.io/badge/license-Apache-green" alt="License"/>
 </p>
 
 ## Описание
