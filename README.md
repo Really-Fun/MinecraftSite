@@ -1,4 +1,4 @@
-# Minecraft Server Portal
+# Прототип сайта по майнкрафту⛏🧱
 
 ![Minecraft Logo](https://example.com/minecraft_logo.png)
 
