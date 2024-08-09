@@ -29,12 +29,11 @@
         <!-- Контейнер мониторинга серверов -->
         <section class="server-monitoring">
             <h2>Мониторинг серверов</h2>
+            {% for server in servers %}
             <div class="server-item">
-                <p>Сервер 1: онлайн</p>
+                <p>Онлайн Сервера: {{server}}</p>
             </div>
-            <div class="server-item">
-                <p>Сервер 2: оффлайн</p>
-            </div>
+            {% endfor %}
         </section>
     </main>
 
