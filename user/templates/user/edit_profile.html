@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'user/css/change_profile.css' %}">
+{% endblock style %}
+
+{% block content %}
+<div class="profile-container">
+    <h1>Изменить профиль</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="id_username">Имя пользователя</label>
+            {{ form.username }}
+        </div>
+
+
+        <div class="form-group">
+            <label for="id_avatar">Аватар</label>
+            {{ form.profile_image }}
+        </div>
+
+        <div class="form-group">
+            <label for="id_first_name">Ваше имя</label>
+            {{ form.first_name }}
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn-submit">Сохранить изменения</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

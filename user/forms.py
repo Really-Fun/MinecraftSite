@@ -4,11 +4,24 @@ from django.contrib.auth import get_user_model
 
 
 class LoginForm(AuthenticationForm):
-    
 
     class Meta:
         model = get_user_model()
         fields = ["username", "password"]
+
+
+class EditProfileForm(forms.ModelForm):
+    username = forms.CharField(
+        disabled=True, label="Имя профиля", widget=forms.TextInput()
+    )
+    first_name = forms.CharField(
+        disabled=False,
+        label="Ваше имя",
+    )
+
+    class Meta:
+        model = get_user_model()
+        fields = ["username", "profile_image", "first_name"]
 
 
 class RegisterForm(UserCreationForm):
