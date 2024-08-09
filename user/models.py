@@ -11,6 +11,7 @@ class Donate(models.Model):
         blank=False,
         unique=True,
     )
+    responsobility = models.IntegerField("Сила доната", blank=False)
     image = models.ImageField(
         blank=True,
         verbose_name="Изображение доната",
