@@ -1,4 +1,5 @@
 {% load static %}
+{% load cache %}
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="{% static 'minecraft/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'minecraft/css/fall_block.css' %}">
+    <link rel="stylesheet" href="{% static 'minecraft/css/row_news.css' %}">
 </head>
 
 <body>
@@ -21,10 +22,13 @@
             {% for new in news %}
             <div class="news-item">
                 <h3>{{ new.title }}</h3>
-                <p>{{ new.text }}</p>
+                <p>{{ new.text|truncatewords:40 }}</p>
+                <img src={{new.image.url}}>
+                <a href={{new.get_absolute_url }}>Посмотреть новость</a>
             </div>
             {% endfor %}
         </section>
+        {% cache 30 sidebars %}
         <div class="falling-blocks"></div>
         <!-- Контейнер мониторинга серверов -->
         <section class="server-monitoring">
@@ -35,6 +39,7 @@
             </div>
             {% endfor %}
         </section>
+        {% endcache %}
     </main>
 
     <!-- Футер -->

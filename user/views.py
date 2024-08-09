@@ -10,7 +10,6 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import logout
 
 
-# Create your views here.
 class RegisterView(CreateView):
     form_class = RegisterForm
     template_name = "user/register.html"

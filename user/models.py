@@ -18,6 +18,13 @@ class Donate(models.Model):
         upload_to="donates/",
     )
 
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Донат"
+        verbose_name_plural = "Донаты"
+
 
 class Profile(AbstractUser):
     profile_image = models.ImageField(
@@ -36,3 +43,7 @@ class Profile(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("profile")
+
+    class Meta:
+        verbose_name = "Профиль"
+        verbose_name_plural = "Профили"

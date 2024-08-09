@@ -3,20 +3,18 @@
 {% block style %}
 <link rel="stylesheet" href= {% static "user/css/profile.css" %}>
 {% endblock style %}
+
 {% block content %}
     <div class="profile-container">
         <h1>Профиль пользователя</h1>
+        
         <div class="profile-header">
-            <img src="{{user.profile_image.url}}" alt="Аватар пользователя" class="profile-avatar">
-            <h2>{{ user.username }}</h2>
-            <ul>
-                <li>
-                    <p>Email: {{ user.email }}</p>
-                </li>
-                <li>
-                    <p>Дата регистрации: {{ user.date_joined|date:"d M Y" }}</p>
-                </li>
-            </ul>
+            <img src="{{ user.profile_image.url }}" alt="Аватар пользователя" class="profile-avatar">
+            <div class="profile-info">
+                <h2>{{ user.username }}</h2>
+                <p>Email: {{ user.email }}</p>
+                <p>Дата регистрации: {{ user.date_joined|date:"d M Y" }}</p>
+            </div>
         </div>
 
         <div class="profile-stats">
@@ -25,6 +23,10 @@
                 <li>Полное имя: {{ user_profile.get_full_name }}</li>
                 <li>Последний вход: {{ user_profile.last_login|date:"d M Y H:i" }}</li>
             </ul>
+        </div>
+
+        <div class="profile-actions">
+            <a href="{% url 'edit' %}" class="btn-edit-profile">Изменить профиль</a>
         </div>
     </div>
 {% endblock %}
