@@ -74,40 +74,6 @@ body {
     flex-grow: 1;
 }
 
-.news-container {
-    width: 66%;
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-    margin-right: 2%;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.news-item {
-    background-color: #555;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.news-item h3 {
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.news-item p {
-    color: #ecf0f1;
-}
-
 .server-monitoring {
     width: 30%;
     background-color: #444;

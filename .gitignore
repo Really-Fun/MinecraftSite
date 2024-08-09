@@ -2,5 +2,6 @@
 *db.sqlite3
 media/media/news/*
 media/media/profiles/*
+media/donate/*
 *migrations
 **__pycache__

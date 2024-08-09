@@ -1,4 +1,7 @@
 from django.test import TestCase
+from django.urls import reverse
+from minecraft.models import Servers, News
+
 
 # Create your tests here.
 from django.test import TestCase
