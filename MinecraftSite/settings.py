@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "minecraft",
     "user",
+    "social_django",
 ]
 
 MIDDLEWARE = [
@@ -107,6 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    "social_core.backends.github.GithubOAuth2",
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -135,3 +139,6 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 LOGIN_URL = "profile"
 AUTH_USER_MODEL = "user.Profile"
+
+SOCIAL_AUTH_GITHUB_KEY = "xxxx"
+SOCIAL_AUTH_GITHUB_SECRET = "xxxxx"

@@ -23,5 +23,7 @@
       </div>
   {% endfor %}
   <button type="submit">Войти</button>
+  <hr>
+<p><a href="{% url 'social:begin' 'github' %}"><img src="/media/social-auth/github.png"></a></p>
 </form>
 {% endblock content %}
