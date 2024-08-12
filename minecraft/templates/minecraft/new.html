@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href={% static "minecraft/css/news.css" %}>
+{% endblock style %}
+{% block content %}
+    <div class="news-container">
+        <div class="news-header">
+            <h1>{{ new.title }}</h1>
+        </div>
+        <div class="news-content">
+            <p>{{ new.text|linebreaks }}</p>
+        </div>
+        <div class="news-content">
+            <p><img src={{new.image.url}}></p>
+        </div>
+
+    </div>
+{% endblock content %}
