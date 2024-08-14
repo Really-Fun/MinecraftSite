@@ -26,7 +26,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(minecraft.urls)),
     path("", include(user.urls)),
-    path("social-auth/", include("social_django.urls", namespace="social")),
 ]
 
 if settings.DEBUG:
