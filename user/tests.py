@@ -37,5 +37,37 @@ class RegisterTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Введенные пароли не совпадают.")
 
+    def test_successful_email_login(self):
+        data = {
+            "username": "testuser",
+            "email": "testuser@example.com",
+            "password1": "password123qwe",
+            "password2": "password123qwe",
+        }
+        response = self.client.post(reverse("register"), data)
+        login_data = {
+            "username": "testuser@example.com",
+            "password": "password123qwe",
+        }
+        response = self.client.post(reverse("login"), data=login_data)
+        self.assertEqual(response.status_code, HTTPStatus.FOUND)
+        self.assertRedirects(response, reverse("profile"))
+
+    def test_successful_login(self):
+        data = {
+            "username": "testuser",
+            "email": "testuser@example.com",
+            "password1": "password123qwe",
+            "password2": "password123qwe",
+        }
+        response = self.client.post(reverse("register"), data)
+        login_data = {
+            "username": "testuser",
+            "password": "password123qwe",
+        }
+        response = self.client.post(reverse("login"), data=login_data)
+        self.assertEqual(response.status_code, HTTPStatus.FOUND)
+        self.assertRedirects(response, reverse("profile"))
+
     def tearDown(self) -> None:
         pass

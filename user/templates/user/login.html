@@ -8,20 +8,14 @@
 {% block content %}
 <h1>Войти</h1>
 <form method="post">
-  {% csrf_token %}
-  {% for field in form %}
-      <div class="form-group">
-          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-          {{ field }}
-          {% if field.errors %}
-              <div class="errorlist">
-                  {% for error in field.errors %}
-                      <p class="error">{{ error }}</p>
-                  {% endfor %}
-              </div>
-          {% endif %}
-      </div>
-  {% endfor %}
-  <button type="submit">Войти</button>
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+    <p><button type="submit">Войти</button></p>
+    
 </form>
 {% endblock content %}
